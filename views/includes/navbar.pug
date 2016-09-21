@@ -1,0 +1,13 @@
+.navbar.navbar-default
+	.container-fluid
+		ul.nav.navbar-nav.navbar-right
+			li
+				a(href='/') Home
+			if user
+				li 
+					a(href='/logout') #{user} is logged in
+			else
+				li
+					a(href='/login') Login
+				li
+					a(href='/register') Register

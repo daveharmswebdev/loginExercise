@@ -1,0 +1,16 @@
+extends includes/layout.pug
+
+block content
+	.login
+		h1 Login
+		if error
+			h2= error
+		form(method="POST")
+			.form-group
+				label(for='user') User Name or Email
+				input#user(type='text', name='user', plaeholder='i.e. you@email.com', required)
+			.form-group
+				label(for='pass') Password
+				input#pass(type='password', name='pass', placeholder='****************', required)
+			button.btn.btn-primary(type='submit') Login
+			button.btn.btn-danger(href='/') Cancel
